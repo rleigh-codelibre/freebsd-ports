@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xerces-c
-PORTVERSION=	3.1.4
+PORTVERSION=	3.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	APACHE/xerces/c/3/sources
 PKGNAMESUFFIX=	3
@@ -13,15 +13,21 @@ COMMENT=	Validating XML parser from the Apache XML Project
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CONFIGURE_ARGS=	--enable-netaccessor-socket \
-		--enable-transcoder-iconv \
-		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
-GNU_CONFIGURE=	yes
-INSTALL_TARGET=	install-strip
-MAKE_ENV=	XERCESCROOT=${WRKSRC}
-TEST_TARGET=	check
+CMAKE_ARGS=	-Dnetaccessor=socket \
+		-Dtranscoder=iconv \
+		-Dpkgconfig-dir=${PREFIX}/libdata/pkgconfig
+INSTALL_TARGET=	install/strip
 USE_LDCONFIG=	yes
-USES=		cpe gmake iconv libtool pathfix
+
+OPTIONS_DEFINE=	DOXYGEN
+OPTIONS_SUB=	yes
+
+DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
+			dot:graphics/graphviz
+
+USES=		cmake:outsource compiler:c++11-lang cpe iconv pathfix tar:xz
+
+LIB_DEPENDS+=	libcurl.so:ftp/curl
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R}
 
