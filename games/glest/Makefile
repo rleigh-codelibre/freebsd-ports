@@ -17,8 +17,9 @@ LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3 \
 BUILD_DEPENDS=	jam:devel/jam
 RUN_DEPENDS=	${LOCALBASE}/${DATADIR_REL}/servers.ini:games/glest-data
 
-USES=		dos2unix openal:al,alut pkgconfig zip lua:51
+USES=		compiler:c++11-lang dos2unix openal:al,alut pkgconfig zip lua:51
 USE_AUTOTOOLS=	automake:env autoconf:env
+USE_CXXSTD=	c++11
 USE_SDL=	yes
 USE_GL=		yes
 GNU_CONFIGURE=	yes

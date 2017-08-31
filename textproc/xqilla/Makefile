@@ -17,7 +17,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3 \
 		libtidy.so:www/tidy-lib
 
-USES=		libtool
+USES=		compiler:c++11-lang libtool
+USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-xerces=${LOCALBASE} \
 		--with-faxpp=no \

@@ -22,7 +22,8 @@ GH_ACCOUNT=	${PORTNAME}hq
 ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=	not ported to it yet
 
-USES=		cmake:outsource
+USES=		cmake:outsource compiler:c++11-lang
+USE_CXXSTD=	c++11
 USE_QT4=	moc_build qmake_build rcc_build uic_build opengl
 
 LDFLAGS+=	-lboost_atomic

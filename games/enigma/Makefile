@@ -18,7 +18,8 @@ LIB_DEPENDS=	libxerces-c.so.3:textproc/xerces-c3 \
 		libcurl.so:ftp/curl
 BUILD_DEPENDS=	convert:graphics/ImageMagick
 
-USES=		gmake localbase pkgconfig
+USES=		compiler:c++11-lang gmake localbase pkgconfig
+USE_CXXSTD=	c++11
 USE_SDL=	image mixer sdl ttf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-system-enet

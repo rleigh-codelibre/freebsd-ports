@@ -15,7 +15,8 @@ LICENSE=	APACHE20
 LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3
 
 GNU_CONFIGURE=	yes
-USES=		gmake libtool localbase pathfix
+USES=		compiler:c++11-lang gmake libtool localbase pathfix
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
 

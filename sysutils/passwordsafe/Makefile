@@ -10,7 +10,7 @@ COMMENT=	Popular secure and convenient password manager
 LICENSE=	ART20
 
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
-		libxerces-c-3.1.so:textproc/xerces-c3
+		libxerces-c.so:textproc/xerces-c3
 BUILD_DEPENDS=	zip:archivers/zip
 
 NOT_FOR_ARCHS=		aarch64 armv6
@@ -18,7 +18,8 @@ NOT_FOR_ARCHS_REASON=	Cannot determine whether the target CPU is big or little e
 
 CONFLICTS=	pwsafe-[0-9]*
 
-USES=		gmake
+USES=		compiler:c++11-lang gmake
+USE_CXXSTD=	c++11
 USE_GITHUB=	yes
 USE_WX=		3.0+
 USE_XORG=	x11 xtst

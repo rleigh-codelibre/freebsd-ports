@@ -23,7 +23,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libvtkFiltersTexture-6.2.so:math/vtk6 \
 		libTKernel.so:cad/opencascade \
 		libSoQt.so:x11-toolkits/soqt \
-		libxerces-c-3.1.so:textproc/xerces-c3 \
+		libxerces-c.so:textproc/xerces-c3 \
 		libboost_thread.so:devel/boost-libs \
 		libarea.so:devel/libarea \
 		libmed.so:french/med \
@@ -36,6 +36,7 @@ GH_TAGNAME=	d28bae3
 
 USES=		dos2unix compiler:c++11-lib cmake:outsource fortran jpeg \
 		python localbase
+USE_CXXSTD=	c++11
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu
 USE_QT4=	qmake_build corelib gui moc_build network opengl rcc_build \

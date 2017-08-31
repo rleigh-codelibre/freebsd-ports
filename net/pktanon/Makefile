@@ -13,7 +13,8 @@ COMMENT=	Network trace anonymizer
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libxerces-c.so.3:textproc/xerces-c3
 
-USES=		dos2unix
+USES=		compiler:c++11-lang dos2unix
+USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lboost_system

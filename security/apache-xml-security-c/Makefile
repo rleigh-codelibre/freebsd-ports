@@ -16,7 +16,8 @@ LIB_DEPENDS+=	libxerces-c.so.3:textproc/xerces-c3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-xerces=${LOCALBASE}
-USES=		gmake libtool tar:bzip2 ssl
+USES=		compiler:c++11-lang gmake libtool tar:bzip2 ssl
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
 

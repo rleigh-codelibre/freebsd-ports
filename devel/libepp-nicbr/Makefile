@@ -15,7 +15,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3
 
-USES=		ssl
+USES=		autoreconf compiler:c++11-lang ssl
+USE_CXXSTD=	c++11
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_header_cppunit_TestRunner_h=no
 CONFIGURE_ARGS=	--with-xerces-c=${LOCALBASE} \

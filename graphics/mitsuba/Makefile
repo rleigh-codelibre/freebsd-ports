@@ -23,7 +23,8 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=	uses SSE instructions
 
-USES=		cmake jpeg tar:bzip2
+USES=		cmake compiler:c++11-lang jpeg tar:bzip2
+USE_CXXSTD=	c++11
 USE_GL=		glew
 USE_QT4=	moc_build qmake_build rcc_build uic_build \
 		gui opengl network xml xmlpatterns

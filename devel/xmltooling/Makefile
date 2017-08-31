@@ -19,7 +19,8 @@ BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-log4shib=${LOCALBASE} --with-openssl=${OPENSSLBASE} --with-curl=${LOCALBASE} --disable-doxygen-doc
-USES=		gmake libtool pkgconfig tar:bzip2 ssl
+USES=		compiler:c++11-lang gmake libtool pkgconfig tar:bzip2 ssl
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 
 PORTDOCS=	*

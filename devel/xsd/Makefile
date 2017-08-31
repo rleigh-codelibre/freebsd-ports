@@ -33,7 +33,8 @@ MAKE_ARGS=	EXTERNAL_LIBCUTL=y \
 		install_prefix=${STAGEDIR}${PREFIX} \
 		install_man_dir=${STAGEDIR}${MANPREFIX}/man \
 		verbose=1
-USES=		gmake tar:bzip2
+USES=		compiler:c++11-lang gmake tar:bzip2
+USE_CXXSTD=	c++11
 
 post-patch:
 # Use devel/build instead of the port's bundled copy.

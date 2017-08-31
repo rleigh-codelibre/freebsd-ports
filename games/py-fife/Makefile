@@ -19,7 +19,8 @@ LIB_DEPENDS=		libvorbisfile.so:audio/libvorbis \
 
 BROKEN_powerpc64=	fails to compile: fifePYTHON_wrap.cxx: relocation truncated to fit
 
-USES=			openal:al pkgconfig cmake:outsource
+USES=			compiler:c++11-lang openal:al pkgconfig cmake:outsource
+USE_CXXSTD=		c++11
 USE_GL=			gl
 USE_SDL=		sdl2 ttf2 image2
 USE_XORG=		xcursor

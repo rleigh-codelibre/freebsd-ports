@@ -26,6 +26,7 @@ DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
 			dot:graphics/graphviz
 
 USES=		cmake:outsource compiler:c++11-lang cpe iconv pathfix tar:xz
+USE_CXXSTD=	c++11
 
 LIB_DEPENDS+=	libcurl.so:ftp/curl
 

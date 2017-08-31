@@ -23,7 +23,8 @@ LIB_DEPENDS=	libxerces-c.so.3:textproc/xerces-c3 \
 USE_WX=		2.8+
 WX_COMPS=	wx contrib
 WX_CONF_ARGS=	absolute
-USES=		dos2unix gettext gmake iconv libtool
+USES=		compiler:c++11-lang dos2unix gettext gmake iconv libtool
+USE_CXXSTD=	c++11
 USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 

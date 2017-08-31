@@ -16,10 +16,11 @@ BUILD_DEPENDS=	boost-libs>=0:devel/boost-libs
 LIB_DEPENDS=	libsaml.so:security/opensaml2 \
 		libxmltooling-lite.so:devel/xmltooling \
 		liblog4shib.so:devel/log4shib \
-		libxerces-c-3.1.so:textproc/xerces-c3 \
+		libxerces-c.so:textproc/xerces-c3 \
 		libxml-security-c.so:security/apache-xml-security-c
 
-USES=		gmake tar:bzip2 ssl
+USES=		compiler:c++11-lang gmake tar:bzip2 ssl
+USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 MAKE_ENV=	NOKEYGEN=YES
 USE_LDCONFIG=	yes

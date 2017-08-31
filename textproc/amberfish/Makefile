@@ -16,7 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libxerces-c.so:textproc/xerces-c3
 
-USES=		gmake makeinfo
+USES=		compiler:c++11-lang gmake makeinfo
+USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all html
 

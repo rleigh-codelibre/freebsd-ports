@@ -18,14 +18,15 @@ PORTSCOUT=	limit:^0\.
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
 		libkolabxml.so:textproc/libkolabxml \
-		libxerces-c-3.1.so:textproc/xerces-c3
+		libxerces-c.so:textproc/xerces-c3
 
 # TODO: Conditionally enable the bindings based on OPTIONs.
 CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
 		-DPHP_BINDINGS:BOOL=OFF \
 		-DPYTHON_BINDINGS:BOOL=OFF \
 		-DUSE_LIBCALENDARING:BOOL=OFF
-USES=		cmake:outsource kde:4
+USES=		cmake:outsource compiler:c++11-lang kde:4
+USE_CXXSTD=	c++11
 USE_KDE=	automoc4 kdelibs pimlibs
 USE_LDCONFIG=	yes
 USE_QT4=	corelib dbus gui network svg xml \

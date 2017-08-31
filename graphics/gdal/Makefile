@@ -51,7 +51,8 @@ LDFLAGS+=	${ICONV_LIB}
 MAKE_JOBS_UNSAFE=	yes
 MAKEFILE=	GNUmakefile
 USE_LDCONFIG=	yes
-USES=		gmake iconv jpeg localbase tar:xz
+USES=		compiler:c++11-lang gmake iconv jpeg localbase tar:xz
+USE_CXXSTD=	c++11
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} PORTVERSION=${PORTVERSION}
 PORTDATA=	*

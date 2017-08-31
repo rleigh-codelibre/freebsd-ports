@@ -18,6 +18,7 @@ CMAKE_ARGS=	-DCEGUI_SAMPLES_ENABLED:BOOL=OFF \
 		-DCEGUI_BUILD_TESTS=OFF
 USE_LDCONFIG=	yes
 USES=		compiler:c++11-lib cmake execinfo pkgconfig tar:bzip2
+USE_CXXSTD=	c++11
 
 PORTDOCS=	*
 
