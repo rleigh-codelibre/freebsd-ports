@@ -1,0 +1,11 @@
+--- configure.ac.orig	2017-09-03 17:27:58 UTC
++++ configure.ac
+@@ -74,7 +74,7 @@ AC_ARG_WITH([no-secdns-1-0],
+ )
+ 
+ CFLAGS="$CFLAGS -I../include"
+-CXXFLAGS="${CFLAGS}"
++CXXFLAGS="${CXXFLAGS} -I../include"
+ 
+ #Check for xerves-c library
+ xercesc_path="/usr/local"
